@@ -32,9 +32,10 @@
 			<tr>
 				<td><spring:message code="name" /></td>
 				<td><form:input path="name" /></td>
+				<td><form:errors path="name" cssClass="error"/></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="Add Regitstration">
+				<td colspan="3"><input type="submit" value="Add Regitstration">
 				</td>
 			</tr>
 		</table>
