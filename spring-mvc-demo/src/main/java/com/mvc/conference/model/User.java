@@ -2,16 +2,16 @@ package com.mvc.conference.model;
 
 public class User {
 
-	private String firtname;
+	private String firstname;
 	private String lastname;
 	private int age;
-	
-	public String getFirtname() {
-		return firtname;
+
+	public String getFirstname() {
+		return firstname;
 	}
 
-	public void setFirtname(String firtname) {
-		this.firtname = firtname;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
 
 	public String getLastname() {

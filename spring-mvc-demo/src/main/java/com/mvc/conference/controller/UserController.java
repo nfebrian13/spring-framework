@@ -16,7 +16,7 @@ public class UserController {
 			@RequestParam(value = "age", defaultValue = "27") int age) {
 
 		User user = new User();
-		user.setFirtname(firstname);
+		user.setFirstname(firstname);
 		user.setLastname(lastname);
 		user.setAge(age);
 
@@ -25,7 +25,7 @@ public class UserController {
 
 	@PostMapping("/user")
 	public User postUser(User user) {
-		System.out.println("User firstname: " + user.getFirtname());
+		System.out.println("User firstname: " + user.getFirstname());
 		return user;
 	}
 
