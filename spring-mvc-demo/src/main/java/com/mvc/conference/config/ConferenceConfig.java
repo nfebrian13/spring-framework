@@ -3,11 +3,9 @@ package com.mvc.conference.config;
 import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -17,16 +15,12 @@ import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-import org.thymeleaf.spring5.SpringTemplateEngine;
-import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
-import org.thymeleaf.spring5.view.ThymeleafViewResolver;
-
 @Configuration
 public class ConferenceConfig implements WebMvcConfigurer {
 
 	@Autowired
 	private ApplicationContext applicationContext;
-	
+
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/files/**").addResourceLocations("/WEB-INF/pdf/");
@@ -51,9 +45,18 @@ public class ConferenceConfig implements WebMvcConfigurer {
 		return lci;
 	}
 
-	
+	@Bean
+	public ViewResolver viewResolver() {
+		InternalResourceViewResolver bean = new InternalResourceViewResolver();
+		bean.setPrefix("/WEB-INF/jsp/");
+		bean.setSuffix(".jsp");
+		bean.setOrder(0);
+		return bean;
+	}
 
-	@Bean /* Thymeleaf Engine Configuration  */
+	/*
+
+	@Bean // Thymeleaf Engine Configuration  
 	public SpringResourceTemplateResolver templateResolver() {
 		SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
 		templateResolver.setApplicationContext(applicationContext);
@@ -62,7 +65,7 @@ public class ConferenceConfig implements WebMvcConfigurer {
 		return templateResolver;
 	}
 	
-	@Bean /* Template Engine  */
+	@Bean // Template Engine  
 	public SpringTemplateEngine templateEngine() {
 		SpringTemplateEngine templateEngine = new SpringTemplateEngine();
 		templateEngine.setTemplateResolver(templateResolver());
@@ -70,7 +73,7 @@ public class ConferenceConfig implements WebMvcConfigurer {
 		return templateEngine;
 	}
 
-	@Bean  /* Thymeleaf View Resolver */
+	@Bean  // Thymeleaf View Resolver 
 	public ViewResolver thymeleafResolver() {
 		ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
 		viewResolver.setTemplateEngine(templateEngine());
@@ -78,4 +81,6 @@ public class ConferenceConfig implements WebMvcConfigurer {
 		return viewResolver;
 	}
 	
+	*/
+
 }
