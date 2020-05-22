@@ -1,4 +1,4 @@
-package com.swagger.demo;
+package com.swagger.demo.service;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMapping;

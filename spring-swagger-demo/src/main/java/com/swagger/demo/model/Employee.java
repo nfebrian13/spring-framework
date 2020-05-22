@@ -1,4 +1,4 @@
-package com.swagger.demo;
+package com.swagger.demo.model;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.EqualsAndHashCode;
