@@ -1,0 +1,48 @@
+goals
+  - clean
+  - compile
+  - package
+  - install
+  - deploy
+
+scopes 
+  - compile 
+  - provided
+  - runtime
+  - test
+  - system
+  - import
+  
+Relases / snapshots 
+same repo
+why not central?
+  - snapshots
+  - milestones
+  - release candidate
+  - release policies  
+  
+plugins
+  - goals
+  - phases
+  - compiler plugin
+  - jar plugin
+  - sources plugin
+  - javadoc plugin  
+  
+phases
+  - validate         -> validate project and structure
+  - compile          -> compile any source in the project
+  - test             -> test the compiled code
+  - package          -> packages the code in the specified package type
+  - integration test -> deploy and run integration tests 
+  - verify           -> run checks to verify integrity
+  - install          -> install package in local repo
+  - deploy           -> copy package to remote repo
+  
+jar plugin
+  package
+  package phase
+  configuration
+    includes/excludes
+    manifest	
+  
