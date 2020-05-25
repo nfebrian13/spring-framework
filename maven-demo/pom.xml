@@ -100,6 +100,21 @@
 				</executions>
 			</plugin> 
 			
+			<!-- java doc	-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<phase>install</phase>
+					</execution>
+				</executions>
+			</plugin> 
+			
 <!--		<plugin>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.1.0</version>
